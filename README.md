@@ -30,20 +30,6 @@ Skrypt będzie również:
 
 # 2. Plik uruchamiający `Run-DefenderExclusions.cmd`
 
-Przygotuj drugi plik w tym samym folderze. Pozwoli Ci uruchamiać skrypt bez ręcznego wpisywania długiego polecenia PowerShell.
-
-Zapisz go jako `Run-DefenderExclusions.cmd`.
-
-```bat
-@echo off
-setlocal
-
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0Manage-DefenderExclusions.ps1" %*
-
-echo.
-pause
-```
-
 Ten plik:
 
 * uruchamia skrypt PowerShell;
