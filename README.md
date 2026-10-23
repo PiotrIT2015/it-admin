@@ -1,9 +1,3 @@
-Przygotujmy kompletny skrypt PowerShell do zarządzania wyjątkami Microsoft Defender w Windows 11. Będzie obsługiwał foldery, pliki i procesy, umożliwiał usuwanie wyjątków oraz sprawdzał wynik każdej operacji.
-
-Zaprojektuję go tak, aby można było korzystać z niego zarówno przez argumenty w CMD lub PowerShell, jak i w trybie interaktywnym.
-
-**Ważne:** wyjątek procesu może ograniczyć skanowanie plików otwieranych przez wskazany program. Nie wyłącza jednak wszystkich zabezpieczeń tego programu ani nie oznacza automatycznego wykluczenia jego pliku `.exe`. Dlatego skrypt nie będzie miał opcji wyłączającej skanowanie wszystkich procesów naraz.
-
 # 1. Architektura skryptu
 
 Skrypt `Manage-DefenderExclusions.ps1` będzie obsługiwał następujące operacje:
