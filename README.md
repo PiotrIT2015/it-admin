@@ -192,12 +192,3 @@ Ponieważ skrypt zarządza ustawieniami zabezpieczeń, może wymagać uprawnień
 4. Wybierz **Uruchom jako administrator**, jeśli ta opcja jest dostępna.
 
 Jeśli jej nie ma, otwórz PowerShell jako administrator i uruchom plik z podanej wyżej ścieżki.
-
-### 4. Ważne w Twojej konfiguracji
-
-Ponieważ wcześniej ustaliliśmy, że usługa Microsoft Defender jest zatrzymana, a masz inny program antywirusowy, uruchomienie pliku `.cmd` **nie naprawi problemu z usługą Defendera**. Plik uruchomi skrypt PowerShell, który może ponownie wyświetlić błąd `0x800106ba`.
-
-Jeśli chcesz tylko sprawdzić działanie menu, możemy również zmodyfikować skrypt tak, aby wyświetlał menu i informację o niedostępności Defendera, zamiast kończyć pracę przy uruchomieniu.
-
-Ten błąd oznacza, że PowerShell nie rozpoznaje `[CmdletBinding()]` i `param()` jako elementów deklaracji skryptu. Najczęściej dzieje się tak, gdy **przed `[CmdletBinding()]` znajduje się jakiś wykonywalny kod**, np. instrukcja `Set-ExecutionPolicy`, dodatkowy znak lub nieprawidłowo wklejony fragment.
-
