@@ -66,7 +66,53 @@ Po zapisaniu pliku możesz najpierw przetestować bezpieczną operację odczytu:
 .\Manage-DefenderExclusion.cmd List
 ```
 
-Jeżeli Defender nadal nie będzie dostępny, skrypt powinien zgłosić problem z odczytem konfiguracji.
+### 4. Uruchomienie z `cmd.exe`
+
+Jeśli jesteś w katalogu ze skryptem:
+
+```bat
+Manage-DefenderExclusion.cmd
+```
+
+Menu uruchomi się automatycznie.
+
+Dodanie wykluczenia folderu:
+
+```bat
+Manage-DefenderExclusion.cmd Folder "D:\Projects\myapp"
+```
+
+Wyświetlenie wykluczeń:
+
+```bat
+Manage-DefenderExclusion.cmd List
+```
+
+Usunięcie wykluczenia:
+
+```bat
+Manage-DefenderExclusion.cmd Remove "D:\Projects\myapp"
+```
+
+### 5. Uruchomienie z innego katalogu
+
+Możesz podać pełną ścieżkę:
+
+```bat
+"D:\Scripts\Manage-DefenderExclusion.cmd" Folder "D:\Projects\myapp"
+```
+
+Jeśli ścieżka do samego pliku CMD zawiera spacje, ujmij ją w cudzysłowy.
+
+### 6. Najważniejsza różnica
+
+| Czynność                          | PowerShell                                                  | Wiersz polecenia (`cmd.exe`)                              |
+| --------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- |
+| Uruchomienie z bieżącego katalogu | `.\Manage-DefenderExclusion.cmd`                            | `Manage-DefenderExclusion.cmd`                            |
+| Uruchomienie pełną ścieżką        | `& "D:\Scripts\Manage-DefenderExclusion.cmd"`               | `"D:\Scripts\Manage-DefenderExclusion.cmd"`               |
+| Przekazanie argumentów            | `.\Manage-DefenderExclusion.cmd Folder "D:\Projects\myapp"` | `Manage-DefenderExclusion.cmd Folder "D:\Projects\myapp"` |
+
+**Ważne:** niezależnie od tego, czy uruchomisz plik z PowerShell, czy z `cmd.exe`, sam skrypt może wymagać uprawnień administratora. 
 
 
 
