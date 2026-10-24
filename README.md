@@ -39,7 +39,7 @@ W PowerShell możesz korzystać z poniższych poleceń.
 .\Manage-DefenderExclusion.bat List
 ```
 
-W każdej z tych sytuacji plik CMD sam uruchamia odpowiedni skrypt PowerShell i przekazuje mu parametry. Nie musisz wpisywać drugiego polecenia.
+W każdej z tych sytuacji plik [*.bat] sam uruchamia odpowiedni skrypt PowerShell i przekazuje mu parametry. Nie musisz wpisywać drugiego polecenia.
 
 ### 2. Jak działa przekazywanie parametrów?
 
@@ -55,8 +55,6 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%SCRIPT%" -Mode "%~1" -
 * `-Mode` i `-Path` to parametry zdefiniowane w Twoim skrypcie `.ps1`.
 
 ### 3. Ważne w Twoim przypadku
-
-Wcześniej otrzymywałeś błąd `0x800106ba`, ponieważ usługa Microsoft Defender była zatrzymana. Poprawiony plik CMD rozwiązuje problem przekazywania parametrów, ale **nie naprawia niedostępności Defendera**.
 
 Ponadto dodawanie wykluczeń wymaga uprawnień administratora. Wykluczenia mogą ograniczać ochronę antywirusową, dlatego dodawaj tylko zaufane ścieżki.
 
@@ -102,7 +100,7 @@ Możesz podać pełną ścieżkę:
 "D:\Scripts\Manage-DefenderExclusion.bat" Folder "D:\Projects\myapp"
 ```
 
-Jeśli ścieżka do samego pliku CMD zawiera spacje, ujmij ją w cudzysłowy.
+Jeśli ścieżka do samego pliku [*.bat] zawiera spacje, ujmij ją w cudzysłowy.
 
 ### 6. Najważniejsza różnica
 
