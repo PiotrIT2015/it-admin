@@ -6,37 +6,37 @@ W PowerShell możesz korzystać z poniższych poleceń.
 **Otworzenie menu:**
 
 ```powershell
-.\Manage-DefenderExclusion.cmd
+.\Manage-DefenderExclusion.bat
 ```
 
 **Dodanie wykluczenia folderu:**
 
 ```powershell
-.\Manage-DefenderExclusion.cmd Folder "D:\Projects\myapp"
+.\Manage-DefenderExclusion.bat Folder "D:\Projects\myapp"
 ```
 
 **Dodanie wykluczenia pliku:**
 
 ```powershell
-.\Manage-DefenderExclusion.cmd File "D:\Projects\myapp\app.exe"
+.\Manage-DefenderExclusion.bat File "D:\Projects\myapp\app.exe"
 ```
 
 **Dodanie wykluczenia procesu:**
 
 ```powershell
-.\Manage-DefenderExclusion.cmd Process "D:\Apps\myapp.exe"
+.\Manage-DefenderExclusion.bat Process "D:\Apps\myapp.exe"
 ```
 
 **Usunięcie wykluczenia folderu lub pliku:**
 
 ```powershell
-.\Manage-DefenderExclusion.cmd Remove "D:\Projects\myapp"
+.\Manage-DefenderExclusion.bat Remove "D:\Projects\myapp"
 ```
 
 **Wyświetlenie aktualnych wykluczeń:**
 
 ```powershell
-.\Manage-DefenderExclusion.cmd List
+.\Manage-DefenderExclusion.bat List
 ```
 
 W każdej z tych sytuacji plik CMD sam uruchamia odpowiedni skrypt PowerShell i przekazuje mu parametry. Nie musisz wpisywać drugiego polecenia.
@@ -63,7 +63,7 @@ Ponadto dodawanie wykluczeń wymaga uprawnień administratora. Wykluczenia mogą
 Po zapisaniu pliku możesz najpierw przetestować bezpieczną operację odczytu:
 
 ```powershell
-.\Manage-DefenderExclusion.cmd List
+.\Manage-DefenderExclusion.bat List
 ```
 
 ### 4. Uruchomienie z `cmd.exe`
@@ -71,7 +71,7 @@ Po zapisaniu pliku możesz najpierw przetestować bezpieczną operację odczytu:
 Jeśli jesteś w katalogu ze skryptem:
 
 ```bat
-Manage-DefenderExclusion.cmd
+Manage-DefenderExclusion.bat
 ```
 
 Menu uruchomi się automatycznie.
@@ -79,19 +79,19 @@ Menu uruchomi się automatycznie.
 Dodanie wykluczenia folderu:
 
 ```bat
-Manage-DefenderExclusion.cmd Folder "D:\Projects\myapp"
+Manage-DefenderExclusion.bat Folder "D:\Projects\myapp"
 ```
 
 Wyświetlenie wykluczeń:
 
 ```bat
-Manage-DefenderExclusion.cmd List
+Manage-DefenderExclusion.bat List
 ```
 
 Usunięcie wykluczenia:
 
 ```bat
-Manage-DefenderExclusion.cmd Remove "D:\Projects\myapp"
+Manage-DefenderExclusion.bat Remove "D:\Projects\myapp"
 ```
 
 ### 5. Uruchomienie z innego katalogu
@@ -99,7 +99,7 @@ Manage-DefenderExclusion.cmd Remove "D:\Projects\myapp"
 Możesz podać pełną ścieżkę:
 
 ```bat
-"D:\Scripts\Manage-DefenderExclusion.cmd" Folder "D:\Projects\myapp"
+"D:\Scripts\Manage-DefenderExclusion.bat" Folder "D:\Projects\myapp"
 ```
 
 Jeśli ścieżka do samego pliku CMD zawiera spacje, ujmij ją w cudzysłowy.
@@ -108,9 +108,9 @@ Jeśli ścieżka do samego pliku CMD zawiera spacje, ujmij ją w cudzysłowy.
 
 | Czynność                          | PowerShell                                                  | Wiersz polecenia (`cmd.exe`)                              |
 | --------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- |
-| Uruchomienie z bieżącego katalogu | `.\Manage-DefenderExclusion.cmd`                            | `Manage-DefenderExclusion.cmd`                            |
-| Uruchomienie pełną ścieżką        | `& "D:\Scripts\Manage-DefenderExclusion.cmd"`               | `"D:\Scripts\Manage-DefenderExclusion.cmd"`               |
-| Przekazanie argumentów            | `.\Manage-DefenderExclusion.cmd Folder "D:\Projects\myapp"` | `Manage-DefenderExclusion.cmd Folder "D:\Projects\myapp"` |
+| Uruchomienie z bieżącego katalogu | `.\Manage-DefenderExclusion.bat`                            | `Manage-DefenderExclusion.bat`                            |
+| Uruchomienie pełną ścieżką        | `& "D:\Scripts\Manage-DefenderExclusion.bat"`               | `"D:\Scripts\Manage-DefenderExclusion.bat"`               |
+| Przekazanie argumentów            | `.\Manage-DefenderExclusion.bat Folder "D:\Projects\myapp"` | `Manage-DefenderExclusion.bat Folder "D:\Projects\myapp"` |
 
 **Ważne:** niezależnie od tego, czy uruchomisz plik z PowerShell, czy z `cmd.exe`, sam skrypt może wymagać uprawnień administratora. 
 
