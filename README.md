@@ -192,3 +192,22 @@ Ponieważ skrypt zarządza ustawieniami zabezpieczeń, może wymagać uprawnień
 4. Wybierz **Uruchom jako administrator**, jeśli ta opcja jest dostępna.
 
 Jeśli jej nie ma, otwórz PowerShell jako administrator i uruchom plik z podanej wyżej ścieżki.
+
+### 4. Jeśli pojawi się błąd dotyczący Execution Policy
+
+Dopiero jeśli PowerShell zablokuje wykonywanie skryptu, uruchom:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Następnie:
+
+```powershell
+.\Manage-DefenderExclusions.ps1 -Mode Menu
+```
+
+Pamiętaj, że operacja modyfikująca wyjątki Defendera wymaga uprawnień administratora. Samo obejście `ExecutionPolicy` nie nadaje tych uprawnień.
+
+
+
